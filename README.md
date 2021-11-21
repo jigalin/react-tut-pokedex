@@ -1,8 +1,6 @@
-# react-tutorial-1
+# POKEDEX USING: 
 
-Following https://www.youtube.com/watch?v=w7ejDZ8SWv8
-
-Notes in #notes.md
+https://pokeapi.co/
 
 INIT:
 npx create-react-app my-app
