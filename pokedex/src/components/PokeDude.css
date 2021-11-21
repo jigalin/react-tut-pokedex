@@ -1,0 +1,62 @@
+.shiny-button,
+.favourite-button-default,
+.favourite-button-clicked {
+  font-size: 10px;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 30px;
+  font-family: "Press Start 2P";
+  border: none;
+}
+
+.shiny-button {
+  background-color: rgb(255, 255, 85);
+  border: 2px solid rgb(204, 204, 0);
+}
+
+.shiny-button:hover {
+  background-color: rgb(207, 207, 0);
+  border: 2px solid rgb(204, 204, 0);
+}
+
+.favourite-button-default {
+  background-color: none;
+  border: 2px solid rgb(63, 63, 63);
+}
+
+.favourite-button-default:hover {
+  background-color: rgb(136, 255, 146);
+  border: 2px solid rgb(64, 175, 36);
+  color: rgb(0, 0, 0);
+}
+
+.favourite-button-clicked {
+  background-color: none;
+  border: 2px solid rgb(36, 175, 47);
+  color: rgb(45, 200, 79);
+}
+
+.favourite-button-clicked:hover {
+  background-color: rgb(255, 144, 144);
+  border: 2px solid rgb(175, 36, 36);
+  color: rgb(255, 255, 255);
+}
+
+.pokeDude {
+  width: 200px;
+  margin: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 0px 24px -5px rgba(0, 0, 0, 0.53);
+  box-shadow: 0px 0px 24px -5px rgba(0, 0, 0, 0.53);
+}
+
+.pokemon-name {
+  font-weight: 500;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Press Start 2P";
+}

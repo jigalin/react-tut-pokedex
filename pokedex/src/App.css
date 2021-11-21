@@ -1,0 +1,32 @@
+.pokemon-container {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.header-logo {
+  width: 200px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.homeWrapper {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.search-pokemon {
+  display: flex;
+  width: 300px;
+  padding: 5px;
+  font-family: "Press Start 2P";
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
