@@ -13,12 +13,17 @@ function App() {
   // Load response to .json format
   // Set CACHED pokeboys to the results
   // Set WORKING COPY / SHOWN pokeboys to what the cached copy currently is
-  const pokeData = () => {
+  const pokeData = async () => {
     console.log("PokeData Called");
-    fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${pageRef * 10}&limit=10`)
-      .then((response) => response.json())
-      .then((data) => setCachedPokeBoys(data.results));
-    setShownPokeBoys(cachedPokeBoys);
+    try {
+      const response = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/?offset=${pageRef * 10}&limit=10`
+      );
+      const pokeboys = await response.json();
+      setCachedPokeBoys(pokeboys.results);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   // On first load - log something
@@ -26,7 +31,11 @@ function App() {
   useEffect(() => {
     console.log("UseEffect Triggered");
     pokeData();
-  }, []);
+  }, [pageRef]);
+
+  useEffect(() => {
+    setShownPokeBoys(cachedPokeBoys);
+  }, [cachedPokeBoys]);
 
   // What happens as we type?
   // Convert to lowercase
@@ -54,11 +63,9 @@ function App() {
 
   // Click NEXT arrow to update the referenced page we're on
   const nextBtn = (e) => {
-    console.log("Current Page:" + pageRef);
-    if (pageRef < 10) {
-      setPageRef(pageRef + 1);
-      pokeData();
-    }
+    setPageRef(pageRef + 1);
+    console.log("NextPage:", pageRef);
+    pokeData();
   };
 
   return (
