@@ -13,7 +13,7 @@
 - Can go forward 10 pages max, and back only to 0 (can't go negative)
 - Added footer logo
 
-**Current Errors: **Got a few warnings for 'unmounted components'? Says it could be a memory leak RIP.
+**Current Errors: useEffect / useState hooks are broken in some way, brb learning how the hell that all works
 
 **Next Up**: Ability to add favourites accross multiple pages, and click a button to 'Show my favourited pokemon' to display on the page (even if some pokemon come from multiple different pages / calls. (rip)
 
