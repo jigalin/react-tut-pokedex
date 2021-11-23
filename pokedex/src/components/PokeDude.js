@@ -17,8 +17,9 @@ const PokeDude = ({ individualPokemon }) => {
     getPokeData();
   }, []);
 
-  const clickedFunc = () => {
+  const showShiny = () => {
     setShinyIsDisplayed(!shinyIsDisplayed);
+    console.log(individualPokemon.url);
   };
 
   const favouriteFunc = () => {
@@ -39,7 +40,7 @@ const PokeDude = ({ individualPokemon }) => {
           }
         />
       )}
-      <button onClick={clickedFunc} className="shiny-button">
+      <button onClick={showShiny} className="shiny-button">
         {shinyIsDisplayed ? "HIDE SHINY" : "SHOW SHINY"}
       </button>
       <button

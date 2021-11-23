@@ -7,8 +7,8 @@ function App() {
   const [cachedPokeBoys, setCachedPokeBoys] = useState([]);
   const [shownPokeBoys, setShownPokeBoys] = useState([]);
   const [pageRef, setPageRef] = useState(0);
+  const [favPokeBoys, setFavPokeBoys] = useState([]);
 
-  console.log(cachedPokeBoys);
   // Fetch some data with a given page reference (10 size for debugging)
   // Load response to .json format
   // Set CACHED pokeboys to the results
@@ -68,6 +68,8 @@ function App() {
     pokeData();
   };
 
+  const addPokeFav = () => {};
+
   return (
     <div className="homeWrapper">
       <div className="headerWrapper">
@@ -97,6 +99,7 @@ function App() {
             <PokeDude
               key={individualPokemon.name}
               individualPokemon={individualPokemon}
+              addToFav={addPokeFav}
             />
           );
         })}
