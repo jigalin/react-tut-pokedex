@@ -68,7 +68,9 @@ function App() {
     pokeData();
   };
 
-  const addPokeFav = () => {};
+  const addPokeFav = (pokeBoy) => {
+    setFavPokeBoys(...(favPokeBoys + pokeBoy));
+  };
 
   return (
     <div className="homeWrapper">

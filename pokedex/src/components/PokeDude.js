@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./PokeDude.css";
 
-const PokeDude = ({ individualPokemon }) => {
+const PokeDude = ({ individualPokemon, addToFav }) => {
   const [furtherPokeInfo, setfurtherPokeInfo] = useState();
   const [shinyIsDisplayed, setShinyIsDisplayed] = useState(false);
   const [isFavourite, setIsFavourite] = useState(false);
@@ -44,7 +44,7 @@ const PokeDude = ({ individualPokemon }) => {
         {shinyIsDisplayed ? "HIDE SHINY" : "SHOW SHINY"}
       </button>
       <button
-        onClick={favouriteFunc}
+        onClick={() => addToFav(furtherPokeInfo)}
         className={
           isFavourite ? "favourite-button-clicked" : "favourite-button-default"
         }
